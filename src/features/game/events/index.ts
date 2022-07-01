@@ -20,6 +20,7 @@ import {
 
 import { GameState } from "../types/game";
 import { trade, TradeAction } from "./trade";
+import { chopShrub, ChopShrubAction } from "./chopShrub";
 
 export type GameEvent =
   | CraftAction
@@ -35,7 +36,9 @@ export type GameEvent =
   | CollectAction
   | TradeAction
   | LandExpansionPlantAction
-  | LandExpansionHarvestAction;
+  | LandExpansionHarvestAction
+  | TradeAction
+  | ChopShrubAction;
 
 type EventName = Extract<GameEvent, { type: string }>["type"];
 
@@ -63,7 +66,11 @@ export const EVENTS: Handlers = {
   "chicken.collectEgg": collectEggs,
   "chicken.feed": feedChicken,
   "item.traded": trade,
+<<<<<<< HEAD
   // Land Expansion Handlers
   "landExpansion.item.planted": landExpansionPlant,
   "landExpansion.item.harvested": landExpansionHarvest,
+=======
+  "shrub.chopped": chopShrub,
+>>>>>>> 093f0669 (add shrub)
 };
