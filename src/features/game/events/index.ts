@@ -66,11 +66,8 @@ export const EVENTS: Handlers = {
   "chicken.collectEgg": collectEggs,
   "chicken.feed": feedChicken,
   "item.traded": trade,
-<<<<<<< HEAD
   // Land Expansion Handlers
   "landExpansion.item.planted": landExpansionPlant,
   "landExpansion.item.harvested": landExpansionHarvest,
-=======
   "shrub.chopped": chopShrub,
->>>>>>> 093f0669 (add shrub)
 };
